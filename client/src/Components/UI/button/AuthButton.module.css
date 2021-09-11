@@ -1,0 +1,7 @@
+.authButton {
+    display: 10px flex;
+    margin: auto;
+    width: 60%;
+    height: 40px;
+    font-size: 30px;
+}
