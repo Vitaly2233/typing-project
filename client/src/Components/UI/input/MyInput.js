@@ -1,6 +1,13 @@
-import React from "react"
-import classes from "./MyInput.module.css"
+import React from "react";
+import classes from "./MyInput.module.css";
 
-export default function MyInput({ placeholder, type }) {
-    return <input type={type} placeholder={placeholder} className={classes.myInput} />
+export default function MyInput({ placeholder, type, onChange }) {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      onChange={onChange}
+      className={classes.myInput}
+    />
+  );
 }

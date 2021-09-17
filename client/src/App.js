@@ -1,12 +1,19 @@
-import Auth from "./pages/Auth"
-import "./styles/App.css"
+import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRouter from "./Components/AppRouter";
+import { AuthContext } from "./Context/Auth";
+import "./styles/App.css";
 
 function App() {
-    return (
-        <div className="App">
-            <Auth />
-        </div>
-    )
+  const [isAuth, setIsAuth] = useState(false);
+
+  return (
+    <AuthContext.Provider value={{ isAuth, setIsAuth }}>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </AuthContext.Provider>
+  );
 }
 
-export default App
+export default App;
